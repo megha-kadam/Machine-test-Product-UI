@@ -1,0 +1,114 @@
+.mainNavBar.bg-body-tertiary {
+    background-color: black !important;
+}
+
+.mainNavBar .nav-link {
+    color: white;
+}
+.mainNavBar .navbar-nav .nav-link.active,
+ .navbar-nav .nav-link.show {
+    color: orange;
+}
+.mainNavBar .nav-link:hover {
+    background-color: purple;
+}
+
+.mainNavBar .navbar-nav{
+    margin-left: 70px;
+    
+}
+
+
+
+/* .....................navabr end /........................*/
+
+.productCard{
+    position: relative;
+    margin-bottom: 0;
+    height: 250px;
+}
+.productCard img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.productCard .hoverImg{
+    opacity: 0;
+}
+
+.productCard:hover .hoverImg{
+    opacity: 1;
+}
+
+.productCard:hover .defaultImg{
+    opacity: 0;
+}
+
+.productCard .icons{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+}
+.productCard .icons ul{
+    list-style: none;
+}
+
+.productCard .icons li{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 10px;
+    display: none;
+    animation: fadeIn 0.7s ease;
+}
+
+.productCard .icons li i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.productCard:hover .icons li{
+    display: block;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.productInfo{
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.productInfo small{
+    color: red;
+    font-size: 16px;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    background-color: rgb(225, 225, 225, 0.6);
+}

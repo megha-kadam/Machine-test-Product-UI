@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3c5801946c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary mainNavBar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:;">
+      <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="logo" title="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="javascript:;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="javascript:;">Product</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" id="serachControl" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-warning" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+  <div class="container my-5">
+    <div class="row" id="productContainer">
+
+      <!-- <div class="col-md-3">
+        <div class="card">
+          <div class="card-body p-0">
+            <figure class="productCard">
+              <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRP-XwZOyUlILfT6l9fKXgO_-kPNulL7hUMMlZ3P5g-qbZW4Z7jph0cCURDJQhAMwoxSje_Vh4DkauFOpZzjBjLzG8KvmGK1A&usqp=CAY" class="defaultImg" alt="" title="">
+
+              <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpl0zF9owwW0VQl7Ia17H9qaX0gNPsoufryY-TZ3QozYtW0KAjPBuMOfGoZTQIRINzVJNy65o-w5sYgkWoZeuouq9snyLr&usqp=CAY" class="hoverImg" alt="" title="">
+
+              <figcaption class="icons">
+                <ul>
+                  <li><i class="fa-solid fa-thumbs-up"></i></li>
+                  <li><i class="fa-solid fa-heart"></i></li>
+                  <li><i class="fa-solid fa-share-from-square"></i></li>
+                  <li><i class="fa-solid fa-eye"></i></li>
+                </ul>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="productInfo">
+        <span>Subcategory</span>
+        <h6 class="m-0">Title</h6>
+        <small>Total Price</small>
+      </div>
+      </div>
+
+ <div class="col-md-3">
+        <div class="card">
+          <div class="card-body p-0">
+            <figure class="productCard">
+              <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRP-XwZOyUlILfT6l9fKXgO_-kPNulL7hUMMlZ3P5g-qbZW4Z7jph0cCURDJQhAMwoxSje_Vh4DkauFOpZzjBjLzG8KvmGK1A&usqp=CAY" class="defaultImg" alt="" title="">
+
+              <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpl0zF9owwW0VQl7Ia17H9qaX0gNPsoufryY-TZ3QozYtW0KAjPBuMOfGoZTQIRINzVJNy65o-w5sYgkWoZeuouq9snyLr&usqp=CAY" class="hoverImg" alt="" title="">
+
+              <figcaption class="icons">
+                <ul>
+                  <li><i class="fa-solid fa-thumbs-up"></i></li>
+                  <li><i class="fa-solid fa-heart"></i></li>
+                  <li><i class="fa-solid fa-share-from-square"></i></li>
+                  <li><i class="fa-solid fa-eye"></i></li>
+                </ul>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="productInfo">
+        <span>Subcategory</span>
+        <h6 class="m-0">Title</h6>
+        <small>Total Price</small>
+      </div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <div class="loader d-none" id="loader">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"     integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+   
+    <script src="./app.js"></script>
+</body>
+</html>
